@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAMPOS | Studio Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- BARRA DE BENEFÍCIO TOPO (Urgência Nike) -->
+    <div class="top-announcement">
+        <p>FRETE GRÁTIS PARA TODO O BRASIL SE COMPRADO NAS PRÓXIMAS 2 HORAS</p>
+    </div>
+
+    <!-- MAIN HERO (Conceito Zara + Foco em Conversão) -->
+    <header class="hero-lp">
+        <div class="logo-lp">VAMPOS</div>
+        
+        <div class="hero-grid">
+            <div class="hero-text">
+                <span class="badge-nike">Edição Limitada</span>
+                <h1>STUDIO EDITION: O FUTURO DO MOVIMENTO</h1>
+                <p class="subtitle">Desenhado com a precisão da alfaiataria clássica. Construído com a tecnologia de amortecimento responsivo urbana. Edição única com pouquíssimas unidades.</p>
+                
+                <!-- CTA Principal (Nike Pill Shape) -->
+                <div class="cta-container">
+                    <a href="#checkout" class="btn-cta">Garantir Meu Par <i class="fa-solid fa-arrow-right"></i></a>
+                    <p class="cta-subtext"><i class="fa-solid fa-shield-halved"></i> Compra 100% Segura • 7 dias de garantia</p>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=800" alt="Tênis Studio Edition">
+            </div>
+        </div>
+    </header>
+
+    <!-- SEÇÃO DE BENEFÍCIOS (Escaneabilidade de Produto) -->
+    <section class="benefits">
+        <div class="benefit-item">
+            <i class="fa-solid fa-feather"></i>
+            <h3>Ultra Leveza</h3>
+            <p>Apenas 240g. Sinta o chão, não o peso.</p>
+        </div>
+        <div class="benefit-item">
+            <i class="fa-solid fa-gem"></i>
+            <h3>Couro Premium</h3>
+            <p>Acabamento feito à mão inspirado nas passarelas europeias.</p>
+        </div>
+        <div class="benefit-item">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Solado Reativo</h3>
+            <p>Retorno de energia máxima a cada passada urbana.</p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PROVA SOCIAL E DETALHE (Estilo Editorial Zara) -->
+    <section class="editorial-detail">
+        <div class="editorial-image">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=600" alt="Detalhe de Uso">
+        </div>
+        <div class="editorial-content">
+            <h2>"O EQUILÍBRIO PERFEITO ENTRE O LUXO E A PERFORMANCE."</h2>
+            <p class="author">— Vogue Urban, 2026</p>
+            <p class="description">Não criamos apenas um tênis. Criamos uma peça de posicionamento. Ele transita perfeitamente entre uma reunião de negócios com blazer de alfaiataria ou uma caminhada noturna pela cidade.</p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE COMPRA / CHECKOUT SIMULADO (Foco Total na Ação) -->
+    <section class="checkout-section" id="checkout">
+        <div class="checkout-box">
+            <h2>SELECIONE SEU TAMANHO</h2>
+            <p class="stock-warning"><i class="fa-solid fa-fire"></i> Restam apenas 14 unidades no seu tamanho!</p>
+            
+            <!-- Seleção de tamanho estilo Nike Grid -->
+            <div class="size-grid">
+                <button class="size-btn">38</button>
+                <button class="size-btn">39</button>
+                <button class="size-btn active">40</button>
+                <button class="size-btn">41</button>
+                <button class="size-btn">42</button>
+                <button class="size-btn">43</button>
+            </div>
+
+            <div class="price-box">
+                <span class="old-price">R$ 899,00</span>
+                <span class="new-price">R$ 699,00 <small>ou 10x de R$ 69,90</small></span>
+            </div>
+
+            <button class="btn-buy-now" onclick="triggerConversion()">COMPRAR AGORA</button>
+            
+            <div class="trust-badges">
+                <span><i class="fa-solid fa-truck"></i> Sedex Grátis</span>
+                <span><i class="fa-solid fa-rotate"></i> Troca Gratuita</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 VAMPOS LAB. Conceito focado em conversão para Portfólio.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

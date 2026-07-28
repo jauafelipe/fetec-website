@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAMPOS | Imobiliária de Alto Padrão</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="#">VAMPOS</a>
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">Comprar</a>
+            <a href="#">Alugar</a>
+            <a href="#">Lançamentos</a>
+            <a href="#">Anunciar Imóvel</a>
+        </nav>
+        <div class="nav-icons">
+            <a href="#" id="favorites-toggle">
+                <i class="fa-regular fa-heart"></i>
+                <span id="fav-count">0</span>
+            </a>
+            <a href="#" class="btn-contact-nav">Fale Conosco</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION COM BUSCA (Estética Zara + Funcionalidade) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>MUDANDO SEU CONCEITO DE MORAR</h1>
+            <p>Casas e apartamentos exclusivos nos bairros mais nobres da cidade.</p>
+            
+            <!-- Barra de Busca Avançada (Estilo Moderna/Nike) -->
+            <div class="search-container">
+                <div class="search-tabs">
+                    <button class="tab-btn active">Comprar</button>
+                    <button class="tab-btn">Alugar</button>
+                </div>
+                <div class="search-bar">
+                    <div class="search-input">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" placeholder="Onde você deseja morar? (Cidade, Bairro...)">
+                    </div>
+                    <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VITRINE DE IMÓVEIS -->
+    <main class="container">
+        <div class="section-header">
+            <h2 class="section-title">Imóveis em Destaque</h2>
+            <div class="filter-tags">
+                <span class="tag active">Todos</span>
+                <span class="tag">Casas</span>
+                <span class="tag">Apartamentos</span>
+                <span class="tag">Coberturas</span>
+            </div>
+        </div>
+        
+        <div class="properties-grid">
+            <!-- Imóvel 1 -->
+            <div class="property-card" data-id="1">
+                <div class="property-image">
+                    <span class="status-tag">Lançamento</span>
+                    <button class="fav-btn" onclick="toggleFavorite(1, this)"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=600" alt="Imóvel 1">
+                </div>
+                <div class="property-info">
+                    <p class="property-location">Jardins, São Paulo</p>
+                    <h3 class="property-title">Casa Contemporânea Minimalista</h3>
+                    <div class="property-details">
+                        <span><i class="fa-solid fa-bed"></i> 4 Quartos</span>
+                        <span><i class="fa-solid fa-maximize"></i> 420m²</span>
+                    </div>
+                    <div class="property-footer">
+                        <p class="property-price">R$ 4.200.000</p>
+                        <button class="btn-action">Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imóvel 2 -->
+            <div class="property-card" data-id="2">
+                <div class="property-image">
+                    <span class="status-tag">Exclusivo</span>
+                    <button class="fav-btn" onclick="toggleFavorite(2, this)"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=600" alt="Imóvel 2">
+                </div>
+                <div class="property-info">
+                    <p class="property-location">Ipanema, Rio de Janeiro</p>
+                    <h3 class="property-title">Apartamento Vista Mar</h3>
+                    <div class="property-details">
+                        <span><i class="fa-solid fa-bed"></i> 3 Quartos</span>
+                        <span><i class="fa-solid fa-maximize"></i> 180m²</span>
+                    </div>
+                    <div class="property-footer">
+                        <p class="property-price">R$ 2.850.000</p>
+                        <button class="btn-action">Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imóvel 3 -->
+            <div class="property-card" data-id="3">
+                <div class="property-image">
+                    <button class="fav-btn" onclick="toggleFavorite(3, this)"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600" alt="Imóvel 3">
+                </div>
+                <div class="property-info">
+                    <p class="property-location">Batuba, Curitiba</p>
+                    <h3 class="property-title">Mansão Integrada à Natureza</h3>
+                    <div class="property-details">
+                        <span><i class="fa-solid fa-bed"></i> 5 Quartos</span>
+                        <span><i class="fa-solid fa-maximize"></i> 650m²</span>
+                    </div>
+                    <div class="property-footer">
+                        <p class="property-price">R$ 6.900.000</p>
+                        <button class="btn-action">Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-logo">VAMPOS</p>
+            <p>&copy; 2026 VAMPOS Imobiliária. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

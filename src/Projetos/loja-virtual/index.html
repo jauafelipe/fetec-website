@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-CONCEPt | Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="#">Loja virtual exemplo</a>
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">Novidades</a>
+            <a href="#">Coleções</a>
+            <a href="#">Masculino</a>
+            <a href="#">Feminino</a>
+        </nav>
+        <div class="nav-icons">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <div class="cart-icon-container" id="cart-toggle">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>MOVE IN STYLE</h1>
+            <p>A união entre o corte minimalista clássico e a atitude urbana.</p>
+            <a href="#produtos" class="btn-nike">Descubra a Coleção</a>
+        </div>
+    </section>
+
+    <main class="container" id="produtos">
+        <h2 class="section-title">Destaques da Semana</h2>
+        
+        <div class="products-grid">
+            <div class="product-card" data-id="1" data-name="Blazer Alfaiataria Performance" data-price="499.00">
+                <div class="product-image">
+                    <span class="tag-nike">Novo</span>
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=600" alt="Produto 1">
+                    <button class="add-to-cart-btn">Adicionar à Sacola</button>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Blazer Alfaiataria Performance</h3>
+                    <p class="product-category">Casual Urbano</p>
+                    <p class="product-price">R$ 499,00</p>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="2" data-name="Jaqueta corta-vento Minimal" data-price="359.90">
+                <div class="product-image">
+                    <span class="tag-nike">Premium</span>
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=600" alt="Produto 2">
+                    <button class="add-to-cart-btn">Adicionar à Sacola</button>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Jaqueta Corta-Vento Minimal</h3>
+                    <p class="product-category">Sport Chic</p>
+                    <p class="product-price">R$ 359,90</p>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="3" data-name="Tênis Studio Preto" data-price="699.00">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=600" alt="Produto 3">
+                    <button class="add-to-cart-btn">Adicionar à Sacola</button>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Tênis Studio Edition</h3>
+                    <p class="product-category">Calçados</p>
+                    <p class="product-price">R$ 699,00</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Sua Sacola (<span id="cart-sidebar-count">0</span>)</h3>
+            <button id="cart-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-message">Sua sacola está vazia.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-value">R$ 0,00</span>
+            </div>
+            <button class="checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 E-CONCEPT. Conceito de Portfólio.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

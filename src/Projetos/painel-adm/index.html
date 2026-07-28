@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAMPOS | Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <!-- SIDEBAR (Minimalismo Zara) -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>VAMPOS</h2>
+                <span>ADMIN</span>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item active"><i class="fa-solid fa-chart-pie"></i> Visão Geral</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-house"></i> Imóveis / Produtos</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-users"></i> Clientes</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-wallet"></i> Transações</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-bell"></i> Notificações</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-gear"></i> Configurações</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="admin-profile">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150" alt="Profile">
+                    <div class="profile-info">
+                        <h4>Ana Silva</h4>
+                        <p>Diretora de Arte</p>
+                    </div>
+                </div>
+                <a href="#" class="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+            
+            <!-- HEADER SUPERIOR -->
+            <header class="main-header">
+                <div class="welcome-msg">
+                    <h1>Olá, Ana</h1>
+                    <p>Aqui está o resumo da sua operação hoje.</p>
+                </div>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Buscar relatório, cliente...">
+                    </div>
+                    <button class="btn-primary-nike"><i class="fa-solid fa-plus"></i> Novo Item</button>
+                </div>
+            </header>
+
+            <!-- CARDS DE MÉTRICAS (Estilo Nike Premium) -->
+            <section class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span>Receita Mensal</span>
+                        <i class="fa-solid fa-arrow-trend-up trend-up"></i>
+                    </div>
+                    <h2>R$ 142.800,00</h2>
+                    <p class="metric-footer"><span class="trend-up">+12.4%</span> em relação ao mês anterior</p>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span>Novos Leads / Clientes</span>
+                        <i class="fa-solid fa-arrow-trend-up trend-up"></i>
+                    </div>
+                    <h2>324</h2>
+                    <p class="metric-footer"><span class="trend-up">+8.2%</span> esta semana</p>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span>Imóveis Visitas</span>
+                        <i class="fa-solid fa-arrow-trend-down trend-down"></i>
+                    </div>
+                    <h2>1,240</h2>
+                    <p class="metric-footer"><span class="trend-down">-2.1%</span> hoje</p>
+                </div>
+            </section>
+
+            <!-- SEÇÃO DE DADOS (Gráfico Simulado + Tabela Fina Zara) -->
+            <section class="data-section">
+                
+                <!-- TABELA DE ÚLTIMAS ATIVIDADES -->
+                <div class="table-container">
+                    <div class="card-title-container">
+                        <h3>Últimas Negociações</h3>
+                        <a href="#" class="see-all">Ver tudo</a>
+                    </div>
+                    <table class="zara-table">
+                        <thead>
+                            <tr>
+                                <th>Item / Cliente</th>
+                                <th>Data</th>
+                                <th>Tipo</th>
+                                <th>Status</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="table-item-info">
+                                        <strong>Mansão Integrada</strong>
+                                        <span>Carlos Henrique</span>
+                                    </div>
+                                </td>
+                                <td>28 Jun, 2026</td>
+                                <td>Venda</td>
+                                <td><span class="status-badge success">Concluído</span></td>
+                                <td><strong>R$ 6.900.000</strong></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table-item-info">
+                                        <strong>Apartamento Vista Mar</strong>
+                                        <span>Mariana Costa</span>
+                                    </div>
+                                </td>
+                                <td>25 Jun, 2026</td>
+                                <td>Aluguel</td>
+                                <td><span class="status-badge pending">Em Análise</span></td>
+                                <td><strong>R$ 12.500/mês</strong></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table-item-info">
+                                        <strong>Corta-Vento Minimal</strong>
+                                        <span>Pedro Souza</span>
+                                    </div>
+                                </td>
+                                <td>24 Jun, 2026</td>
+                                <td>E-commerce</td>
+                                <td><span class="status-badge success">Enviado</span></td>
+                                <td><strong>R$ 359,90</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- MINI PERFORMANCE CARD -->
+                <div class="performance-card">
+                    <h3>Metas da Equipe</h3>
+                    <div class="progress-container">
+                        <div class="progress-info">
+                            <span>Vendas do Trimestre</span>
+                            <span>78%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 78%;"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-info">
+                            <span>Atendimento ao Cliente</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 92%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
