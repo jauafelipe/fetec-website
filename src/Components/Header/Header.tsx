@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./Header.css";
-import { Carrosel } from "../Carrosel-Header/Carrosel";
 import { Link } from "react-router-dom";
 
 export const Header = () => {

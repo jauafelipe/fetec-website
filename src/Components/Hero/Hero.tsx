@@ -1,4 +1,3 @@
-import { Carrosel } from "../Carrosel-Header/Carrosel";
 import "./Hero.css";
 import { FaArrowRight } from "react-icons/fa6";
 
