@@ -1,19 +1,21 @@
 /* Container pai fixo no topo da tela */
+/* Wrapper principal fixo no topo e centralizado na tela */
 .header-wrapper {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%; /* 👈 Empurra o ponto inicial para o centro da tela */
+  transform: translateX(-50%); /* 👈 Puxa metade da própria largura de volta para centralizar perfeitamente */
   width: 100%;
-  z-index: 1000;
+  max-width: 1300px; /* 👈 Limita a largura do wrapper ao mesmo tamanho do Hero */
   padding: 0 24px;
+  z-index: 1000;
   box-sizing: border-box;
 }
 
-/* Navbar em formato de "Cápsula" centralizada */
+/* Navbar interna em cápsula */
 .navbar {
   width: 100%;
-  max-width: 1300px;
-  margin: 18px auto 0;
+  margin-top: 18px;
   height: 70px;
   padding: 0 28px;
 
@@ -28,16 +30,16 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 
   transition: all 0.35s ease;
+  box-sizing: border-box;
 }
 
-/* Estado da navbar quando o usuário rola a página */
+/* Estado com scroll */
 .navbar.scrolled {
   margin-top: 10px;
   background: rgba(14, 15, 17, 0.9);
   border-color: rgba(255, 255, 255, 0.12);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
-
 /* Logo */
 .logo-container {
   display: flex;
@@ -126,7 +128,6 @@
 }
 
 /* RESPONSIVIDADE */
-
 @media (max-width: 900px) {
   .header-wrapper {
     padding: 0 16px;
@@ -135,6 +136,7 @@
   .navbar {
     height: 65px;
     padding: 0 20px;
+    position: relative; /* 👈 GARANTE que o menu mobile se alinhe perfeitamente por esta navbar */
   }
 
   .menu-toggle {
@@ -142,25 +144,34 @@
   }
 
   .nav-cta {
-    display: none; /* Esconde o botão do topo no mobile */
+    display: none;
   }
 
-  /* Dropdown do Menu Mobile */
+  /* Dropdown do Menu Mobile Centralizado */
   .nav-menu {
     position: absolute;
-    top: 75px;
+    top: calc(100% + 12px); /* 👈 Fica logo abaixo da navbar com um pequeno espaçamento */
     left: 0;
     right: 0;
+    width: 100%; /* 👈 Força a largura total da navbar */
+    box-sizing: border-box; /* 👈 Impede que paddings empurrem para a direita */
+
     background: #121316;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 18px;
+    
+    display: flex;
     flex-direction: column;
+    align-items: center; /* 👈 Centraliza os links/textos internamente */
+    text-align: center;
     padding: 24px;
     gap: 20px;
+
     opacity: 0;
     pointer-events: none;
     transform: translateY(-10px);
     transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   }
 
   .nav-menu.open {
