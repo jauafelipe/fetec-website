@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Hero.css";
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -12,7 +13,7 @@ export const Hero = () => {
                 </span>
 
                 <h1>
-                    Transformando
+                    Transforme Suas
                     <br />
                     <span>Ideias em Realidade</span>
                 </h1>
@@ -26,14 +27,14 @@ export const Hero = () => {
 
                 <div className="hero-buttons">
 
-                    <button className="btn-primary">
+                    <Link to="/contato" className="btn-primary">
                         Solicitar orçamento
                         <FaArrowRight />
-                    </button>
+                    </Link>
 
-                    <button className="btn-secondary">
+                    <Link to="/projetos" className="btn-secondary">
                         Ver Projetos
-                    </button>
+                    </Link>
 
                 </div>
 

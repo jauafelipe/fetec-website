@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Cta.css";
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -25,14 +26,14 @@ export const Cta = () => {
 
                 <div className="cta-buttons">
 
-                    <button className="btn-primary">
-                        Solicitar orçamento
-                        <FaArrowRight />
-                    </button>
-
-                    <button className="btn-secondary">
+                  <Link to="/contato" className="btn-primary">
+                    Solicitar orçamento
+                    <FaArrowRight />
+                    </Link>
+                   
+                    <Link to="/contato" className="btn-secondary">
                         Falar no WhatsApp
-                    </button>
+                    </Link>
 
                 </div>
 

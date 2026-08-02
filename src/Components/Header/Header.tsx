@@ -40,13 +40,17 @@ export const Header = () => {
           
           {/* Botão duplicado apenas para visualização no menu mobile */}
           <li className="mobile-cta">
-            <button className="btn-cta">Solicitar orçamento</button>
+            <Link to="/contato" className="btn-cta">
+              Solicitar orçamento
+            </Link>
           </li>
         </ul>
 
         {/* Botão principal (Desktop) */}
         <div className="nav-cta">
-          <button className="btn-cta">Solicitar orçamento</button>
+          <Link to="/contato" className="btn-cta">
+            Solicitar orçamento
+          </Link>
         </div>
 
         {/* Botão Hamburguer (Mobile) */}
