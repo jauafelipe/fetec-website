@@ -9,7 +9,7 @@ const projetos = [
         titulo: "Loja Virtual Moderna",
         descricao:
             "Projeto focado em performance, UX e aumento de conversões.",
-        arquivo: "src/Projetos/loja-virtual/index.html"
+        arquivo: "/apresentavel/loja-virtual/index.html"
     },
     {
         imagem: "./imobiliaria.png",
@@ -17,7 +17,7 @@ const projetos = [
         titulo: "Site para Imobiliária",
         descricao:
             "Website responsivo com busca inteligente e design premium.",
-        arquivo: "src/Projetos/imobiliaria/index.html"
+        arquivo: "/apresentavel/imobiliaria/index.html"
     },
     {
         imagem: "./painel_adm.png",
@@ -25,7 +25,7 @@ const projetos = [
         titulo: "Dashboard Administrativo",
         descricao:
             "Painel para gestão de clientes, pedidos e indicadores.",
-        arquivo: "src/Projetos/painel-adm/index.html"
+        arquivo: "/apresentavel/painel-adm/index.html"
     },
     {
         imagem: "./lading_page.png",
@@ -33,7 +33,7 @@ const projetos = [
         titulo: "Página de Alta Conversão",
         descricao:
             "Landing Page otimizada para campanhas de marketing.",
-        arquivo: "src/Projetos/lading-page/index.html"
+        arquivo: "/apresentavel/lading-page/index.html"
     }
 ];
 
