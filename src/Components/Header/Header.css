@@ -1,100 +1,181 @@
-
-.navbar {
-    width: 100%;
-    max-width: 1300px;
-
-    margin: 18px auto 0;
-
-    height: 75px;
-
-    padding: 0 35px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    border-radius: 18px;
-
-    background: rgba(15,15,15,.35);
-
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-
-    border: 1px solid rgba(255,255,255,.06);
-
-    transition: .35s ease;
+/* Container pai fixo no topo da tela */
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
-.navbar.active {
-    background: rgba(17, 17, 17, .75);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
 
-    border-bottom: 1px solid rgba(255,255,255,.08);
+/* Navbar em formato de "Cápsula" centralizada */
+.navbar {
+  width: 100%;
+  max-width: 1300px;
+  margin: 18px auto 0;
+  height: 70px;
+  padding: 0 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 20px;
+  background: rgba(18, 19, 22, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: all 0.35s ease;
+}
+
+/* Estado da navbar quando o usuário rola a página */
+.navbar.scrolled {
+  margin-top: 10px;
+  background: rgba(14, 15, 17, 0.9);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-    height: 50px;
-}
-.navbar ul {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    list-style: none;
+  height: 42px;
+  width: auto;
+  object-fit: contain;
 }
 
-.navbar li {
-    position: relative;
+/* Lista de Navegação */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    transition: .3s;
-}
-.navbar li a:hover {
-    color: #d8d8d8;
+.nav-menu li {
+  position: relative;
 }
 
-.navbar li::after {
-    content: "";
+.nav-menu li a {
+  text-decoration: none;
+  color: #a1a1aa; /* Cinza suave como no layout */
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
 
+.nav-menu li a:hover {
+  color: #ffffff;
+}
+
+/* Animação da linha no hover do link */
+.nav-menu li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-menu li:hover::after {
+  width: 100%;
+}
+
+/* Botão de Ação (Solicitar Orçamento) */
+.btn-cta {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px);
+  background: #f0f0f0;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+.mobile-cta {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+  .header-wrapper {
+    padding: 0 16px;
+  }
+
+  .navbar {
+    height: 65px;
+    padding: 0 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-cta {
+    display: none; /* Esconde o botão do topo no mobile */
+  }
+
+  /* Dropdown do Menu Mobile */
+  .nav-menu {
     position: absolute;
-
+    top: 75px;
     left: 0;
-    bottom: -8px;
+    right: 0;
+    background: #121316;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    flex-direction: column;
+    padding: 24px;
+    gap: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
 
-    width: 0;
-    height: 2px;
+  .nav-menu.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
 
-    background: #fff;
-    border-radius: 20px;
-
-    transition: .3s;
-}
-
-.navbar li:hover::after {
+  .mobile-cta {
+    display: block;
     width: 100%;
+    margin-top: 10px;
+  }
+
+  .mobile-cta .btn-cta {
+    width: 100%;
+  }
 }
-
-
-.navbar button {
-    padding: 12px 24px;
-    border: none;
-    border-radius: 10px;
-
-    background: white;
-    color: #111;
-
-    font-weight: 600;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.navbar button:hover {
-    transform: translateY(-2px);
-    background: #ececec;
-}
-
-/* Responsivo */ @media (max-width:900px){ .navbar{ height:70px; padding:0 20px; } .navbar ul{ gap:22px; } .navbar button{ padding:12px 18px; font-size:14px; } } @media (max-width:700px){ .navbar ul{ display:none; } .logo{ width:55px; height:55px; } }
