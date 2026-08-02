@@ -1,4 +1,4 @@
-import './Contacto.css';
+import './Contato.css';
 
 import { useState, useRef, type FormEvent, type ChangeEvent } from 'react';
 import emailjs from '@emailjs/browser';
