@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Servicos.css";
 import {
     FaLaptopCode,
@@ -63,10 +64,13 @@ export default function Servicos() {
                     focados em desempenho, design e resultados.
                 </p>
 
-                <button>
+                <button className="btn-primary">
+                      <Link to="/contato" style={{ textDecoration: 'none', color: 'inherit' }}>
                     Solicitar orçamento
+                     </Link>
                     <FaArrowRight />
                 </button>
+              
 
             </section>
 
