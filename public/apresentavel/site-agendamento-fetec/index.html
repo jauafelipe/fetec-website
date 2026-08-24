@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Site de agendamento online responsivo">
+    <title>AgendaFácil | Agendamento Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header"><a class="brand" href="#inicio"><i>A</i><span>Agenda<span>Fácil</span></span></a><button
+            class="menu-toggle" aria-label="Abrir menu">☰</button>
+        <nav id="nav"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#como-funciona">Como
+                funciona</a><a href="#contato">Contato</a><a class="nav-cta" href="#agendar">Agendar</a></nav>
+    </header>
+    <main>
+        <section class="hero" id="inicio">
+            <div><small>AGENDAMENTO ONLINE</small>
+                <h1>Seu horário marcado em <strong>poucos cliques.</strong></h1>
+                <p>Escolha o serviço, selecione o melhor horário e confirme seu atendimento. Simples, rápido e sem troca
+                    de mensagens.</p>
+                <div class="actions"><a class="btn primary" href="#agendar">Agendar agora →</a><a class="btn ghost"
+                        href="#como-funciona">Como funciona</a></div>
+                <div class="trust">✓ Atendimento rápido　 ✓ 100% responsivo　 ✓ Fácil de usar</div>
+            </div>
+            <div class="preview">
+                <div class="preview-head"><span><em>PRÓXIMO ATENDIMENTO</em><b>Hoje,
+                            09:00</b></span><mark>Confirmado</mark></div>
+                <div class="appointment"><i>F</i><span><b>Corte + Barba</b><small>Profissional: Felipe</small></span>
+                </div>
+                <div class="calendar">
+                    <div><b>Agosto 2026</b><span>‹　›</span></div>
+                    <section>
+                        <small>D</small><small>S</small><small>T</small><small>Q</small><small>Q</small><small>S</small><small>S</small><span></span><span></span><span></span><span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><b>12</b><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="servicos">
+            <header><small>ESCOLHA O SERVIÇO</small>
+                <h2>Agende do seu jeito.</h2>
+                <p>Serviços organizados para você encontrar o que precisa rapidamente.</p>
+            </header>
+            <div class="services">
+                <article data-service="Corte de cabelo"><i>✂</i>
+                    <h3>Corte de cabelo</h3>
+                    <p>30 min • R$ 50,00</p><button>Agendar →</button>
+                </article>
+                <article data-service="Barba"><i>◈</i>
+                    <h3>Barba</h3>
+                    <p>20 min • R$ 30,00</p><button>Agendar →</button>
+                </article>
+                <article data-service="Corte + Barba"><i>✦</i>
+                    <h3>Corte + Barba</h3>
+                    <p>50 min • R$ 70,00</p><button>Agendar →</button>
+                </article>
+            </div>
+        </section>
+        <section class="booking section" id="agendar">
+            <div><small>RESERVE SEU HORÁRIO</small>
+                <h2>Agendamento simples, sem complicação.</h2>
+                <p>Selecione o serviço, escolha uma data e um horário disponível. Depois, informe seus dados para
+                    receber a confirmação.</p>
+            </div>
+            <form id="bookingForm"><label>Serviço<select id="service" required>
+                        <option value="">Selecione um serviço</option>
+                        <option>Corte de cabelo</option>
+                        <option>Barba</option>
+                        <option>Corte + Barba</option>
+                    </select></label>
+                <div class="row"><label>Data<input id="date" type="date" required></label><label>Horário<select
+                            id="time" required>
+                            <option value="">Escolha o horário</option>
+                        </select></label></div><label>Nome<input id="name" placeholder="Seu nome completo"
+                        required></label><label>WhatsApp<input id="phone" placeholder="(00) 00000-0000"
+                        required></label><button class="btn primary full">Confirmar agendamento →</button><small
+                    class="note">Modelo demonstrativo: os dados são armazenados apenas neste navegador.</small>
+            </form>
+        </section>
+        <section class="section" id="como-funciona">
+            <header><small>COMO FUNCIONA</small>
+                <h2>Três passos e pronto.</h2>
+            </header>
+            <div class="steps">
+                <article><b>01</b>
+                    <h3>Escolha o serviço</h3>
+                    <p>Veja as opções, duração e valores.</p>
+                </article>
+                <article><b>02</b>
+                    <h3>Escolha o horário</h3>
+                    <p>Encontre uma data e horário disponíveis.</p>
+                </article>
+                <article><b>03</b>
+                    <h3>Confirme</h3>
+                    <p>Informe seus dados e finalize.</p>
+                </article>
+            </div>
+        </section>
+        <section class="cta" id="contato"><small>TENHA UM SITE ASSIM</small>
+            <h2>Pronto para transformar seus agendamentos?</h2>
+            <p>A FETEC pode adaptar este modelo para a identidade e as necessidades do seu negócio.</p><a
+                class="btn primary" href="mailto:fefodev@gmail.com?subject=Quero%20um%20site%20de%20agendamento">Quero
+                meu site →</a>
+        </section>
+    </main>
+    <footer>AgendaFácil <span>Desenvolvido como demonstração FETEC • 2026</span></footer>
+    <div class="modal" id="modal">
+        <div><button class="close">×</button><strong>✓</strong>
+            <h2>Agendamento confirmado!</h2>
+            <p id="msg"></p><button class="btn primary full" id="ok">Perfeito</button>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

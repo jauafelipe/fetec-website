@@ -40,7 +40,7 @@
     font-weight: 700;
     margin-bottom: 25px;
 
-    background: linear-gradient(#fff,#d0d0d0);
+    background: linear-gradient(#222121,#000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -92,15 +92,14 @@
 }
 
 .btn-secondary {
-
     background: transparent;
-    color: white;
-    border: 1px solid rgba(255,255,255,.15);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgba(0, 0, 0, 0.15);
 }
 
 .btn-secondary:hover {
-
-    background: #1d1d1d;
+    color: #fff;
+    background: #000000;
 }
 
 .hero-info {

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Modelo de site médico com agendamento online.">
+<title>Dr. Rafael Martins | Cardiologia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <a class="logo" href="#inicio">
+    <span class="logo-icon">+</span>
+    <span><b>Dr. Rafael Martins</b><small>Cardiologia</small></span>
+  </a>
+  <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+  <nav class="nav">
+    <a href="#inicio">Início</a>
+    <a href="#especialidade">Especialidade</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#faq">Dúvidas</a>
+    <a class="nav-button" href="#agendamento">Agendar consulta</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-copy">
+    <span class="eyebrow">CARDIOLOGIA • CRM 00.000</span>
+    <h1>Cuidar do coração é cuidar da <span>sua vida.</span></h1>
+    <p>Atendimento cardiológico personalizado, com tecnologia, prevenção e acompanhamento próximo em todas as etapas.</p>
+    <div class="actions">
+      <a class="button primary" href="#agendamento">Agendar consulta →</a>
+      <a class="button secondary" href="#sobre">Conheça o doutor</a>
+    </div>
+    <div class="trust"><span>✓ Atendimento humanizado</span><span>✓ Consulta particular</span><span>✓ Horários flexíveis</span></div>
+  </div>
+  <div class="doctor-visual">
+    <div class="photo-placeholder"><span>RM</span><small>FOTO DO MÉDICO</small></div>
+    <div class="floating-card"><b>+12 anos</b><span>de experiência</span></div>
+  </div>
+</section>
+
+<section class="specialties section" id="especialidade">
+  <div class="section-title">
+    <span class="eyebrow">ATUAÇÃO</span>
+    <h2>Cuidados para cada fase da sua saúde.</h2>
+    <p>Consultas e acompanhamento focados em prevenção, diagnóstico e qualidade de vida.</p>
+  </div>
+  <div class="cards">
+    <article><div class="icon">♥</div><h3>Prevenção cardiovascular</h3><p>Acompanhamento de fatores de risco e hábitos para cuidar do coração.</p></article>
+    <article><div class="icon">⌁</div><h3>Acompanhamento clínico</h3><p>Consultas individualizadas para avaliação e acompanhamento contínuo.</p></article>
+    <article><div class="icon">◉</div><h3>Avaliação cardiológica</h3><p>Investigação e orientação de acordo com as necessidades de cada paciente.</p></article>
+  </div>
+</section>
+
+<section class="booking section" id="agendamento">
+  <div class="booking-info">
+    <span class="eyebrow">AGENDAMENTO ONLINE</span>
+    <h2>Escolha o melhor horário para você.</h2>
+    <p>Selecione a data e o horário disponíveis. Depois, informe seus dados para solicitar sua consulta.</p>
+    <div class="info-item"><b>📍 Clínica Saúde & Vida</b><span>Av. Principal, 1000 — Centro</span></div>
+    <div class="info-item"><b>🕐 Horários</b><span>Segunda a sexta, 08h às 18h</span></div>
+  </div>
+
+  <form class="booking-form" id="bookingForm">
+    <h3>Agende sua consulta</h3>
+    <label>Nome completo<input id="name" type="text" placeholder="Digite seu nome" required></label>
+    <label>WhatsApp<input id="phone" type="tel" placeholder="(00) 00000-0000" required></label>
+    <div class="row">
+      <label>Data<input id="date" type="date" required></label>
+      <label>Horário<select id="time" required><option value="">Selecione</option></select></label>
+    </div>
+    <label>Motivo da consulta<textarea id="reason" rows="3" placeholder="Opcional"></textarea></label>
+    <button class="button primary full" type="submit">Solicitar agendamento</button>
+    <small>Seus dados são usados apenas para demonstração neste modelo.</small>
+  </form>
+</section>
+
+<section class="about section" id="sobre">
+  <div class="about-image"><span>DR</span></div>
+  <div>
+    <span class="eyebrow">SOBRE O MÉDICO</span>
+    <h2>Medicina com atenção ao que realmente importa.</h2>
+    <p>O Dr. Rafael Martins atua em cardiologia com foco em prevenção, acompanhamento clínico e atendimento humanizado.</p>
+    <p>O objetivo é oferecer uma experiência clara, acolhedora e baseada em decisões compartilhadas com cada paciente.</p>
+    <div class="credentials"><span>CRM 00.000</span><span>RQE 00.000</span><span>Especialista em Cardiologia</span></div>
+  </div>
+</section>
+
+<section class="faq section" id="faq">
+  <div class="section-title"><span class="eyebrow">DÚVIDAS</span><h2>Perguntas frequentes.</h2></div>
+  <div class="faq-list">
+    <details><summary>Como funciona o agendamento?<b>+</b></summary><p>Escolha uma data e horário, informe seus dados e envie a solicitação. Em uma versão conectada ao sistema real, a clínica poderá confirmar automaticamente.</p></details>
+    <details><summary>A consulta pode ser particular?<b>+</b></summary><p>Sim. Este modelo pode ser adaptado para informar valores, convênios e formas de pagamento.</p></details>
+    <details><summary>Posso remarcar minha consulta?<b>+</b></summary><p>Sim. O sistema pode ser integrado a uma área de gerenciamento para remarcar ou cancelar horários.</p></details>
+  </div>
+</section>
+
+<section class="cta">
+  <span class="eyebrow">CUIDE DA SUA SAÚDE</span>
+  <h2>Pronto para agendar sua consulta?</h2>
+  <p>Escolha um horário e dê o próximo passo para cuidar da sua saúde.</p>
+  <a class="button primary" href="#agendamento">Agendar agora →</a>
+</section>
+</main>
+
+<footer><div class="logo"><span class="logo-icon">+</span><span><b>Dr. Rafael Martins</b><small>Cardiologia</small></span></div><p>© 2026 • Modelo demonstrativo desenvolvido pela FETEC.</p></footer>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button class="close">×</button>
+    <div class="success">✓</div>
+    <h2>Solicitação enviada!</h2>
+    <p id="confirmation"></p>
+    <button class="button primary full close-action">Fechar</button>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

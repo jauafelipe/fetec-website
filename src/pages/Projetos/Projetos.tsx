@@ -34,7 +34,33 @@ const projetos = [
         descricao:
             "Landing Page otimizada para campanhas de marketing.",
         arquivo: "/apresentavel/lading-page/index.html"
-    }
+    },
+    {
+         imagem: "./agendamento.png",
+        categoria: "Agendamento Online",
+        titulo: "Site de Agendamento Online",
+        descricao:
+            "Sistema de agendamento online com integração de calendário e notificações.",
+        arquivo: "/apresentavel/site-agendamento-fetec/index.html"
+    },
+    {
+          imagem: "./advocacia.png",
+        categoria: "Website advocacia",
+        titulo: "Site para Escritório de Advocacia",
+        descricao:
+            "Website moderno e responsivo para escritório de advocacia, com informações sobre serviços e equipe.",
+        arquivo: "/apresentavel/site-advocacia-fetec/index.html"
+    },    {
+          imagem: "./agendamento_medico.png",
+        categoria: "Agendamento Médico",
+        titulo: "Sistema de Agendamento Médico",
+        descricao:
+            "Plataforma completa para agendamento de consultas e exames.",
+        arquivo: "/apresentavel/site-agendamento-medico/index.html"
+    },
+    
+
+
 ];
 
 export const Projetos = () => {

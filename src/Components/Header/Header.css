@@ -50,6 +50,7 @@
   height: 42px;
   width: auto;
   object-fit: contain;
+  border-radius: 50%;
 }
 
 /* Lista de Navegação */
