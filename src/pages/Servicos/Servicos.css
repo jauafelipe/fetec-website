@@ -34,7 +34,7 @@
 
     border: 1px solid rgba(255,255,255,.06);
 
-    color: #cfcfcf;
+    color: #fcfafa;
 
     margin-bottom: 25px;
 
@@ -46,7 +46,7 @@
     font-size: clamp(3rem, 7vw, 5rem);
 
     line-height: 1.1;
-
+    color:#111;
     margin-bottom: 30px;
 }
 
@@ -56,7 +56,7 @@
 
     margin: auto;
 
-    color: #9f9f9f;
+    color: #000000;
 
     line-height: 1.8;
 
@@ -191,6 +191,7 @@
     text-align: center;
 
     font-size: 3rem;
+    color:#111;
 
     margin-bottom: 70px;
 }

@@ -35,17 +35,17 @@
   font-size: clamp(2.5rem, 5vw, 3.8rem);
   font-weight: 700;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: #000000;
 }
 
 .contact-header h1 span {
-  background: linear-gradient(135deg, #ffffff, #a1a1aa);
+  background: linear-gradient(135deg, #000000, #000000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .contact-header p {
-  color: #b5b5b5;
+  color: #000000;
   font-size: 1.05rem;
   line-height: 1.6;
 }
@@ -70,7 +70,7 @@
   align-items: center;
   gap: 20px;
   padding: 24px;
-  background: rgba(18, 19, 22, 0.6);
+  background: rgba(2, 2, 2);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
   backdrop-filter: blur(12px);
@@ -124,7 +124,7 @@
 .social-links {
   margin-top: 10px;
   padding: 24px;
-  background: rgba(18, 19, 22, 0.6);
+  background: rgb(0, 0, 0);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
 }
@@ -162,7 +162,7 @@
 
 /* Formulário (Direita) */
 .contact-form {
-  background: rgba(18, 19, 22, 0.6);
+  background: rgb(0, 0, 0);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   padding: 36px;

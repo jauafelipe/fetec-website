@@ -21,32 +21,31 @@
     letter-spacing: 2px;
     font-size: 0.9rem;
     font-weight: 600;
+    color: #000000;
 
     text-transform: uppercase;
 }
 
 .services-header h2 {
     font-size: clamp(2.2rem, 5vw, 3.5rem);
+    color: #000000;
 
     margin: 18px 0;
 
-    color: var(--fetec-white);
 
     letter-spacing: -1px;
 }
 
 .services-header h2 span {
-    color: var(--fetec-blue);
 
     letter-spacing: normal;
 }
 
 .services-header p {
     max-width: 700px;
-
+    color: #000000;
     margin: auto;
 
-    color: var(--fetec-muted);
 
     line-height: 1.8;
 }

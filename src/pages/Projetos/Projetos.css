@@ -16,7 +16,7 @@
 
 .projects-header span{
 
-    color:#999;
+    color:#000000;
 
     letter-spacing:2px;
 
@@ -24,6 +24,7 @@
 }
 
 .projects-header h2{
+    color:#111;
 
     font-size:clamp(2.2rem,5vw,3.8rem);
 
@@ -36,7 +37,7 @@
 
     margin:auto;
 
-    color:#9d9d9d;
+    color:#000000;
 
     line-height:1.8;
 }
