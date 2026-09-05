@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react"; // Se usar react-icons: import { FaBars, FaXmark } from "react-icons/fa6";
+import { Menu, X } from "lucide-react";
+import { FaMoon, FaSun } from "react-icons/fa";
+import { useTheme } from "../../hooks/useTheme";
 import "./Header.css";
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,12 +40,23 @@ export const Header = () => {
           <li>
             <Link to="/contato" onClick={() => setMenuOpen(false)}>Contato</Link>
           </li>
-          
+
           {/* Botão duplicado apenas para visualização no menu mobile */}
           <li className="mobile-cta">
             <Link to="/contato" className="btn-cta">
               Solicitar orçamento
             </Link>
+          </li>
+
+          <li className="mobile-theme-toggle">
+            <button
+              className="theme-toggle"
+              onClick={toggleTheme}
+              aria-label="Alternar tema"
+            >
+              {theme === "dark" ? <FaSun size={18} /> : <FaMoon size={18} />}
+              {theme === "dark" ? "Modo claro" : "Modo escuro"}
+            </button>
           </li>
         </ul>
 
@@ -53,9 +67,19 @@ export const Header = () => {
           </Link>
         </div>
 
+        {/* Botão de tema (claro/escuro) */}
+        <button
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label={theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro"}
+          title={theme === "dark" ? "Modo claro" : "Modo escuro"}
+        >
+          {theme === "dark" ? <FaSun size={18} /> : <FaMoon size={18} />}
+        </button>
+
         {/* Botão Hamburguer (Mobile) */}
-        <button 
-          className="menu-toggle" 
+        <button
+          className="menu-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle Menu"
         >

@@ -4,7 +4,7 @@
     min-height: 100vh;
 
 
-    color: #fff;
+    color: var(--text);
 }
 
 /* ========================= */
@@ -30,11 +30,11 @@
 
     border-radius: 30px;
 
-    background: #141414;
+    background: var(--bg-soft);
 
-    border: 1px solid rgba(255,255,255,.06);
+    border: 1px solid var(--border-color);
 
-    color: #fcfafa;
+    color: var(--text-dim);
 
     margin-bottom: 25px;
 
@@ -46,7 +46,7 @@
     font-size: clamp(3rem, 7vw, 5rem);
 
     line-height: 1.1;
-    color:#111;
+    color:var(--text);
     margin-bottom: 30px;
 }
 
@@ -56,7 +56,7 @@
 
     margin: auto;
 
-    color: #000000;
+    color: var(--text-muted);
 
     line-height: 1.8;
 
@@ -79,9 +79,9 @@
 
     border-radius: 14px;
 
-    background: #fff;
+    background: var(--btn-bg);
 
-    color: #111;
+    color: var(--btn-text);
 
     font-size: 16px;
 
@@ -96,7 +96,7 @@
 
     transform: translateY(-3px);
 
-    background: #ececec;
+    background: var(--btn-bg-hover);
 }
 
 /* ========================= */
@@ -124,9 +124,9 @@
 
     border-radius: 22px;
 
-    background: #141414;
+    background: var(--bg-soft);
 
-    border: 1px solid rgba(255,255,255,.06);
+    border: 1px solid var(--border-color);
 
     transition: .35s;
 }
@@ -135,7 +135,7 @@
 
     transform: translateY(-8px);
 
-    border-color: rgba(255,255,255,.12);
+    border-color: var(--border-strong);
 }
 
 .icon {
@@ -154,7 +154,7 @@
 
     border-radius: 18px;
 
-    background: #1d1d1d;
+    background: var(--bg-card-alt);
 
     margin-bottom: 25px;
 }
@@ -168,7 +168,7 @@
 
 .service-card p {
 
-    color: #a7a7a7;
+    color: var(--text-muted);
 
     line-height: 1.8;
 }
@@ -191,7 +191,7 @@
     text-align: center;
 
     font-size: 3rem;
-    color:#111;
+    color:var(--text);
 
     margin-bottom: 70px;
 }
@@ -207,9 +207,9 @@
 
 .steps div {
 
-    background: #141414;
+    background: var(--bg-soft);
 
-    border: 1px solid rgba(255,255,255,.06);
+    border: 1px solid var(--border-color);
 
     border-radius: 20px;
 
@@ -239,9 +239,9 @@
 
     border-radius: 50%;
 
-    background: #fff;
+    background: var(--btn-bg);
 
-    color: #111;
+    color: var(--btn-text);
 
     font-size: 24px;
 
@@ -269,9 +269,9 @@
 
     border-radius: 30px;
 
-    background: #141414;
+    background: var(--bg-soft);
 
-    border: 1px solid rgba(255,255,255,.06);
+    border: 1px solid var(--border-color);
 
     text-align: center;
 }
@@ -289,7 +289,7 @@
 
     margin: auto;
 
-    color: #9f9f9f;
+    color: var(--text-muted);
 
     line-height: 1.8;
 
@@ -304,9 +304,9 @@
 
     border-radius: 14px;
 
-    background: white;
+    background: var(--btn-bg);
 
-    color: black;
+    color: var(--btn-text);
 
     font-size: 16px;
 
@@ -321,7 +321,7 @@
 
     transform: translateY(-3px);
 
-    background: #ececec;
+    background: var(--btn-bg-hover);
 }
 
 /* ========================= */

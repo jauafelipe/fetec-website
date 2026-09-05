@@ -21,14 +21,13 @@
     letter-spacing: 2px;
     font-size: 0.9rem;
     font-weight: 600;
-    color: #000000;
 
     text-transform: uppercase;
 }
 
 .services-header h2 {
     font-size: clamp(2.2rem, 5vw, 3.5rem);
-    color: #000000;
+    color: var(--text);
 
     margin: 18px 0;
 
@@ -43,7 +42,7 @@
 
 .services-header p {
     max-width: 700px;
-    color: #000000;
+    color: var(--text-muted);
     margin: auto;
 
 
@@ -120,7 +119,7 @@
         rgba(0, 102, 255, 0.4);
 
     box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.35),
+        0 20px 50px var(--shadow-color),
         0 0 35px rgba(0, 102, 255, 0.08);
 }
 

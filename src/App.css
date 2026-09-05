@@ -1,3 +1,67 @@
+/* ===== TEMA ===== */
+:root {
+    /* Tema escuro (padrão) */
+    --bg: #0B0B0B;
+    --bg-soft: #141414;
+    --bg-card: #161616;
+    --bg-card-alt: #1d1d1d;
+    --bg-elevated: #1f1f1f;
+    --bg-input: #121316;
+    --text: #ffffff;
+    --text-muted: #a1a1aa;
+    --text-dim: #d9d9d9;
+    --text-h: #f3f4f6;
+    --text-on-light: #111111;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.12);
+    --btn-bg: #2E7CF6;
+    --btn-bg-hover: #4d94ff;
+    --btn-text: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --glass: rgba(18, 19, 22, 0.65);
+    --glass-solid: rgba(14, 15, 17, 0.9);
+    --navbar-bg: #121316;
+
+    /* Aliases usados por componentes (mantidos p/ compatibilidade) */
+    --fetec-blue: #2E7CF6;
+    --fetec-blue-light: #6aa5ff;
+    --fetec-card: var(--bg-card);
+    --fetec-border: var(--border-color);
+    --fetec-white: var(--text);
+    --fetec-muted: var(--text-muted);
+}
+
+[data-theme="light"] {
+    --bg: #f5f5f7;
+    --bg-soft: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-alt: #f0f0f3;
+    --bg-elevated: #ffffff;
+    --bg-input: #ffffff;
+    --text: #111111;
+    --text-muted: #55555f;
+    --text-dim: #33333a;
+    --text-h: #08060d;
+    --text-on-light: #ffffff;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --border-strong: rgba(0, 0, 0, 0.16);
+    --btn-bg: #2E7CF6;
+    --btn-bg-hover: #1d5fd6;
+    --btn-text: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --glass: rgba(255, 255, 255, 0.75);
+    --glass-solid: rgba(255, 255, 255, 0.92);
+    --navbar-bg: #ffffff;
+
+    /* Aliases usados por componentes (mantidos p/ compatibilidade) */
+    --fetec-blue: #1d5fd6;
+    --fetec-blue-light: #2E7CF6;
+    --fetec-card: var(--bg-card);
+    --fetec-border: var(--border-color);
+    --fetec-white: var(--text);
+    --fetec-muted: var(--text-muted);
+}
+
 *{
     margin:0;
     padding:0;
@@ -10,9 +74,10 @@ html{
 
 body{
     font-family:"Poppins",sans-serif;
-    background:#0B0B0B;
-    color:#fff;
+    background:var(--bg);
+    color:var(--text);
     overflow-x:hidden;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 #root{
