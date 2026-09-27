@@ -15,6 +15,7 @@ import {
 export const Contacto = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
+  const [emailChecking, setEmailChecking] = useState(false);
   const [status, setStatus] = useState({ type: '', message: '' });
 
   const [formData, setFormData] = useState({
@@ -28,10 +29,121 @@ export const Contacto = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  // ===== Validação de e-mail =====
+  // 1) Formato  2) Domínio descartável  3) Registro MX do domínio
+  const DISPOSABLE_DOMAINS = new Set([
+    'mailinator.com', '10minutemail.com', 'guerrillamail.com',
+    'temp-mail.org', 'tempmail.com', 'throwawaymail.com',
+    'yopmail.com', 'trashmail.com', 'sharklasers.com',
+    'getnada.com', 'dispostable.com', 'maildrop.cc'
+  ]);
+
+  const validateEmail = async (email: string): Promise<{ ok: boolean; message: string }> => {
+    const trimmed = email.trim().toLowerCase();
+
+    // 1. Formato
+    const formatOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(trimmed);
+    if (!formatOk) {
+      return { ok: false, message: '❌ E-mail inválido. Verifique o formato (ex: nome@empresa.com).' };
+    }
+
+    const domain = trimmed.split('@')[1];
+
+    // 2. Domínio descartável/temporário
+    if (DISPOSABLE_DOMAINS.has(domain)) {
+      return { ok: false, message: '❌ Não aceitamos e-mails temporários. Use seu e-mail real.' };
+    }
+
+    // 3. O domínio possui registro MX? (consegue receber e-mails)
+    try {
+      const res = await fetch(
+        `https://dns.google/resolve?name=${encodeURIComponent(domain)}&type=MX`
+      );
+      const data = await res.json();
+      const hasMx = Array.isArray(data.Answer) && data.Answer.length > 0;
+      if (!hasMx) {
+        return {
+          ok: false,
+          message: '❌ Este domínio de e-mail não existe ou não pode receber mensagens. Confira se digitou corretamente.'
+        };
+      }
+    } catch {
+      // Se a consulta DNS falhar (offline/bloqueio), não bloqueia o envio
+      console.warn('Não foi possível verificar o domínio do e-mail (DNS indisponível).');
+    }
+
+    return { ok: true, message: '' };
+  };
+
+  // Checagem profunda de mailbox (via serverless function + ZeroBounce/Hunter/Emailable).
+  // Só roda se a API estiver configurada; caso contrário, ignora silenciosamente.
+  const checkMailbox = async (email: string): Promise<{ ok: boolean; message: string }> => {
+    try {
+      const res = await fetch('/api/verify-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+      if (!res.ok) return { ok: true, message: '' };
+
+      const data = await res.json();
+      if (!data.available) return { ok: true, message: '' };
+
+      if (data.valid === false && data.definitive === true) {
+        return {
+          ok: false,
+          message: '❌ Este endereço de e-mail não existe. Confira se digitou corretamente.'
+        };
+      }
+    } catch {
+      // API indisponível: não bloqueia o usuário
+    }
+    return { ok: true, message: '' };
+  };
+
+  // Validação em tempo real quando o usuário sai do campo
+  const handleEmailBlur = async () => {
+    const email = formData.email.trim();
+    if (!email) return;
+
+    setEmailChecking(true);
+    // 1ª camada: formato + descartáveis + MX (instantânea)
+    const result = await validateEmail(email);
+    if (!result.ok) {
+      setEmailChecking(false);
+      setStatus({ type: 'error', message: result.message });
+      return;
+    }
+    // 2ª camada: verificação real da caixa ( mailbox ) via API
+    const deep = await checkMailbox(email);
+    setEmailChecking(false);
+
+    if (!deep.ok) {
+      setStatus({ type: 'error', message: deep.message });
+    } else {
+      setStatus({ type: '', message: '' });
+    }
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setStatus({ type: '', message: '' });
+
+    // Valida o e-mail antes de enviar (camadas 1 e 2)
+    const emailCheck = await validateEmail(formData.email);
+    if (!emailCheck.ok) {
+      setLoading(false);
+      setStatus({ type: 'error', message: emailCheck.message });
+      return;
+    }
+
+    const deepCheck = await checkMailbox(formData.email.trim());
+    if (!deepCheck.ok) {
+      setLoading(false);
+      setStatus({ type: 'error', message: deepCheck.message });
+      return;
+    }
 
     // Pega as chaves diretamente do arquivo .env
     const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -161,8 +273,14 @@ export const Contacto = () => {
                 placeholder="Ex: joao@empresa.com"
                 value={formData.email}
                 onChange={handleChange}
+                onBlur={handleEmailBlur}
                 required
               />
+              {emailChecking && (
+                <small style={{ color: 'var(--text-muted)', fontSize: '0.78rem' }}>
+                  🔎 Verificando e-mail...
+                </small>
+              )}
             </div>
 
             <div className="form-group">
